@@ -38,3 +38,26 @@ void sumaArregloEscalar(float* arreglo, int t, float escalar){
         arreglo++;
     }
 }
+
+void comparacion(int t1, int t2, char *cadena1, char *cadena2){
+  int c = 1;
+  int tam = 0;
+
+  if (t1 != t2) {
+    printf("Las cadenas son diferentes\n");
+  } else {
+    while (*cadena1 != '\0' && *cadena2 != '\0' && c != 0) {
+      if (*cadena1 != *cadena2) {
+        c = 0;
+      }
+      cadena1++;
+      cadena2++;
+    }
+
+    if (c == 1) {
+      printf("Las cadenas son iguales\n");
+    } else {
+      printf("Las cadenas son diferentes\n");
+    }
+  }
+}
